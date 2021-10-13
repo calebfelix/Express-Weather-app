@@ -4,6 +4,7 @@ const axios = require('axios');
 
 const app = express();
 const apiKey = "87de4b3eba4d7d554106c0b0d2a32dc0"
+port = process.env.PORT || 5000;
 
 
 app.use(express.static("public"));
@@ -26,6 +27,6 @@ try{
     }
   });
 
-app.listen(5000 || process.env.PORT, function () {
+app.listen(port, function () {
     console.log("Weather app listening on port 5000!");
   });
